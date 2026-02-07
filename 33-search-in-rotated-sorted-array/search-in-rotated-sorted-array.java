@@ -4,14 +4,10 @@ class Solution {
         if (n == 0) return -1;
         if (arr[0] == target) return 0;
         if (arr[n - 1] == target) return n - 1;
-        
         int lo = 0, hi = n - 1;
-        
         while (lo <= hi) {
-            int mid = lo + (hi - lo) / 2;
-            
-            if (arr[mid] == target) return mid;
-            
+            int mid = lo + (hi - lo) / 2;  
+            if (arr[mid] == target) return mid; 
             // Check if left side is sorted
             if (arr[lo] <= arr[mid]) {
                 // Left side is sorted
